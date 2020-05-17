@@ -3,6 +3,7 @@ const express = require('express')
 const exphbs = require('express-handlebars')
 const bodyParser = require('body-parser')
 const mongoose = require('mongoose')
+const methodOverride = require('method-override')
 
 // Setup server
 const app = express()
@@ -17,6 +18,10 @@ app.set('view engine', 'hbs')
 
 // Use body parser
 app.use(bodyParser.urlencoded({ extended: true }))
+
+// RESTful 設計 - rebuild routing for edit & delete parts
+app.use(methodOverride('_method'))
+
 
 // Load static data
 // const restaurantList = require('./restaurant.json')
@@ -73,7 +78,7 @@ app.get('/edit/:id', (req, res) => {
     .lean()
     .then(restaurant => res.render('edit', { restaurant }))
 })
-app.post('/edit/:id', (req, res) => {
+app.put('/edit/:id', (req, res) => {    // RESTful
   const id = req.params.id
   return Restaurant.findById(id)
     .then(restaurant => {
@@ -85,7 +90,7 @@ app.post('/edit/:id', (req, res) => {
 })
 
 //Delete a restaurant
-app.post('/delete/:id', (req, res) => {
+app.delete('/delete/:id', (req, res) => {   // RESTful
   const id = req.params.id
   return Restaurant.findById(id)
     .then(restaurant => restaurant.remove())

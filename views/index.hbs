@@ -44,7 +44,7 @@
               {{!--buttons --}}
               <div class="text-right m-2 d-flex">
                 <a href="/edit/{{this._id}}" class="btn btn-sm btn-secondary border-dark mr-2">Edit</a>
-                <form action="/delete/{{this._id}}" method="post">
+                <form action="/delete/{{this._id}}?_method=DELETE" method="POST">
                   <button type="button" class="btn btn-sm btn-dark text-white" data-toggle="modal"
                     data-target="#id{{this._id}}">
                     Delete
