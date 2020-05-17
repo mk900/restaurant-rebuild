@@ -1,0 +1,54 @@
+<div class="container my-3 p-2">
+
+  <form action="/edit/{{restaurant._id}}?_method=PUT" method="POST">
+    <label for="name">
+      餐廳名稱
+    </label>
+    <input type="text" class="form-control mb-1" name="name" id="name" value="{{restaurant.name}}">
+
+    <label for="name_en">
+      餐廳英文名稱
+    </label>
+    <input type="text" class="form-control mb-1" name="name_en" id="name_en" value="{{restaurant.name_en}}">
+
+    <label for="category">
+      分類
+    </label>
+    <input type="text" class="form-control mb-1" name="category" id="category" value="{{restaurant.category}}">
+
+    <label for="image">
+      圖片 URL
+    </label>
+    <input type="url" class="form-control mb-1" name="image" id="image" value="{{restaurant.image}}">
+
+    <label for="location">
+      地址
+    </label>
+    <input type="text" class="form-control mb-1" name="location" id="location" value="{{restaurant.location}}">
+
+    <label for="phone">
+      電話
+    </label>
+    <input type="text" class="form-control mb-1" name="phone" id="phone" value="{{restaurant.phone}}">
+
+    <label for="google_map">
+      Google Map URL
+    </label>
+    <input type="url" class="form-control mb-1" name="google_map" id="google_map" value="{{restaurant.google_map}}">
+
+    <label for="rating">
+      評分
+    </label>
+    <input type="text" class="form-control mb-1" name="rating" id="rating" value="{{restaurant.rating}}">
+
+    <label for="description">
+      描述
+    </label>
+    <input type="text" class="form-control mb-1" name="description" id="description" value="{{restaurant.description}}">
+
+    <a href="/" class="btn btn-light border-dark mx-2 my-3">Back</a>
+    <button type="submit" class="btn btn-secondary border-dark my-3">Edit</button>
+
+  </form>
+
+</div>

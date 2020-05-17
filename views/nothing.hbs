@@ -1,0 +1,31 @@
+<!-- ./views/index.handlebars -->
+<div class="container mt-5">
+  {{#each numbers}}
+  <span>---</span>
+  <div class="d-inline-flex align-items-center justify-content-center bg-info text-white rounded-circle my-4"
+    style="width: 30px; height: 30px;">
+    {{this}}
+  </div>
+  <span>---</span>
+  {{/each}}
+
+  <!-- search bar -->
+  <div class="row" id="search-bar">
+    <div class="col-12">
+      <form action="/search">
+        <div class="input-group mb-3">
+          <input type="text" name="keyword" class="form-control"
+            placeholder="Enter restaurant name or category to search..." value="{{keyword}}"
+            aria-label="restaurant Name..." aria-describedby="search-button">
+          <div class="input-group-append">
+            <button class="btn btn-outline-secondary" type="submit" id="search-button">Search</button>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- restaurant list -->
+  <div class="container">
+    <h2 class='d-flex justify-content-center align-items-center nothing-page'>Sorry, nothing found !!</h2>
+  </div>
