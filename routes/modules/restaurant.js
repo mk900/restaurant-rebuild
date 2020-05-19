@@ -36,7 +36,7 @@ router.put('/edit/:id', (req, res) => {    //RESTful
       Object.assign(restaurant, req.body)
       return restaurant.save()
     })
-    .then(() => res.redirect(`/${id}`))
+    .then(() => res.redirect(`/restaurant/${id}`))
     .catch(error => console.log(error))
 })
 

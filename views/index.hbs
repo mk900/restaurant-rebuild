@@ -9,12 +9,12 @@
   <span>---</span>
   {{/each}}
 
-  <a class="btn btn-warning border-dark my-3" href="/new">Create</a>
+  <a class="btn btn-warning border-dark my-3" href="/restaurant/new">Create</a>
 
   <!-- search bar -->
   <div class="row" id="search-bar">
     <div class="col-12">
-      <form action="/search">
+      <form action="/restaurant/search">
         <div class="input-group mb-3">
           <input type="text" name="keyword" class="form-control"
             placeholder="Enter restaurant name or category to search..." value="{{keyword}}"
@@ -31,7 +31,7 @@
   <div class="row" id="data-panel">
     {{#each restaurants}}
     <div class="col-sm-3">
-      <a href="/{{this._id}}" class="text-secondary">
+      <a href="/restaurant/{{this._id}}" class="text-secondary">
         <div class="card mb-2">
           <img class="card-img-top" src="{{this.image}}" alt="Card image cap">
           <div class="card-body restaurant-item-body">
@@ -43,8 +43,8 @@
               </span>
               {{!--buttons --}}
               <div class="text-right m-2 d-flex">
-                <a href="/edit/{{this._id}}" class="btn btn-sm btn-secondary border-dark mr-2">Edit</a>
-                <form action="/delete/{{this._id}}?_method=DELETE" method="POST">
+                <a href="/restaurant/edit/{{this._id}}" class="btn btn-sm btn-secondary border-dark mr-2">Edit</a>
+                <form action="/restaurant/delete/{{this._id}}?_method=DELETE" method="POST">
                   <button type="button" class="btn btn-sm btn-dark text-white" data-toggle="modal"
                     data-target="#id{{this._id}}">
                     Delete
