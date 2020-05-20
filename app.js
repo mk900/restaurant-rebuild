@@ -24,17 +24,18 @@ app.use(bodyParser.urlencoded({ extended: true }))
 app.use(methodOverride('_method'))
 
 // Connect DB
-mongoose.connect('mongodb://localhost/restaurant', {
-  useNewUrlParser: true,
-  useUnifiedTopology: true
-})
-const db = mongoose.connection
-db.on('error', () => {
-  console.log('db error')
-})
-db.once('open', () => {
-  console.log('db connected!')
-})
+// mongoose.connect('mongodb://localhost/restaurant', {
+//   useNewUrlParser: true,
+//   useUnifiedTopology: true
+// })
+// const db = mongoose.connection
+// db.on('error', () => {
+//   console.log('db error')
+// })
+// db.once('open', () => {
+//   console.log('db connected!')
+// })
+require('./config/mongoose')
 
 // Load restaurant model
 const Restaurant = require('./models/restaurant')
