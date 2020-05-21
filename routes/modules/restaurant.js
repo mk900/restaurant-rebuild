@@ -49,7 +49,7 @@ router.delete('/delete/:id', (req, res) => {   //RESTful
     .catch(error => console.log(error))
 })
 
-// // Search restaurant
+// // Search restaurant --> 移到 home.js
 // router.get('/search', (req, res) => {
 //   const keyword = req.query.keyword
 //   return Restaurant.find()

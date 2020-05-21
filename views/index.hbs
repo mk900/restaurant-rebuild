@@ -9,12 +9,29 @@
   <span>---</span>
   {{/each}}
 
-  <a class="btn btn-warning border-dark my-3" href="/restaurant/new">Create</a>
+  <div class="d-flex align-items-center justify-content-between">
+    <a class="btn btn-warning border-dark my-3" href="/restaurant/new">Create</a>
+
+    {{!-- Sort dropdown list --}}
+    <div class="dropdown show">
+      <a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown"
+        aria-haspopup="true" aria-expanded="false">
+        Sort by
+      </a>
+      <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+        {{#each sortList}}
+        <a class="dropdown-item" href="/?keyword={{../keyword}}&sortId={{this.id}}" data-sortId="">
+          {{this.name}}</a>
+        {{/each}}
+      </div>
+    </div>
+  </div>
 
   <!-- search bar -->
   <div class="row" id="search-bar">
     <div class="col-12">
-      <form action="/search">
+      <form action="/">
+        <!-- 修改原routing: action="/search" -->
         <div class="input-group mb-3">
           <input type="text" name="keyword" class="form-control"
             placeholder="Enter restaurant name or category to search..." value="{{keyword}}"
