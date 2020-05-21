@@ -2,7 +2,7 @@
 
 你的餐廳清單 - CRUD實作
 
-![screenshot](https://github.com/mk900/restaurant-CRUD/blob/master/screenshot.GIF)
+![screenshot](https://github.com/mk900/restaurant-rebuild/blob/master/screenshot.GIF)
 
 ## Feature 功能表
 
