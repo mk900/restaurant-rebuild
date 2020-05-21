@@ -1,6 +1,6 @@
 # Project Title 專案名
 
-你的餐廳清單 - CRUD實作
+你的餐廳清單 - CRUD實作 & Sort by
 
 ![screenshot](https://github.com/mk900/restaurant-rebuild/blob/master/screenshot.GIF)
 
@@ -22,7 +22,7 @@
   - 描述 & 特色
   - 圖片
   
--使用者可以透過搜尋餐廳名稱來找到特定的餐廳
+-使用者可以透過搜尋餐廳名稱來找到特定的餐廳 & Sort by 名稱、類別、地區、評分
 
 ## Getting Started 如何開始
 
